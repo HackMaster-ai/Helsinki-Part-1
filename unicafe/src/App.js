@@ -39,6 +39,16 @@ const App = () => {
     setBad(preValue => preValue + 1)
   }
 
+  let all = good + neutral + bad
+
+  function calcAverage() {
+    return Math.abs((good - bad) / 9)
+  }
+
+  function pourcentage() {
+    return (good * 100 / all) + "%"
+  }
+
   return (
     <div>
       <Header title={"Give feedback"}/>
@@ -49,6 +59,9 @@ const App = () => {
       <DisplayStat name={'Good'} value={good} />
       <DisplayStat name={'Bad'} value={bad} />
       <DisplayStat name={'Neutral'} value={neutral} />
+      <DisplayStat name={'All'} value={all} />
+      <DisplayStat name={'Average'} value={calcAverage()} />
+      <DisplayStat name={'Positive'} value={pourcentage()} />
     </div>
   )
 }
