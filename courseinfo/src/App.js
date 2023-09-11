@@ -1,23 +1,24 @@
 import Course from "./components/Course"
 import Header from "./components/Header"
+import Total from "./components/Total"
 
-const Part = (props) => {
-  return (
-    <p>{props.name} number of exercises : {props.number}</p>
-  )
-}
+// const Part = (props) => {
+//   return (
+//     <p>{props.name} number of exercises : {props.number}</p>
+//   )
+// }
 
-const Content = (props) => {
-  return (
-    <Part name={props.name} number={props.number} />
-  )
-}
+// const Content = (props) => {
+//   return (
+//     <Part name={props.name} number={props.number} />
+//   )
+// }
 
-const Total = (props) => {
-  return (
-    <p>Number of exercises : {props.total}</p>
-  )
-}
+// const Total = (props) => {
+//   return (
+//     <p>Number of exercises : {props.total}</p>
+//   )
+// }
 
 
 
@@ -53,6 +54,7 @@ const App = () => {
     <div>
       <Header courses={course} />
       <Course courses={course} />
+      <Total courses={course} />
     </div>
   )
 }
